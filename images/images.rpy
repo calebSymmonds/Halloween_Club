@@ -1,0 +1,6 @@
+image skelly normal = "01.webp"
+image skelly grumpy = "02.webp"
+image skelly happy = "03.webp"
+image skelly shocked = "04.webp"
+image skelly curious = "05.webp"
+image skelly content = "06.webp"
