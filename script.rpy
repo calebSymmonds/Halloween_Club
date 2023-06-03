@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -20,13 +20,22 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show skelly happy at truecenter
+    show skelly normal at truecenter
 
     # These display lines of dialogue.
 
     skelly "You've created a new Ren'Py game."
 
     skelly "Once you add a story, pictures, and music, you can release it to the world!"
+    
+    menu:
+        "Where do you want to go?"
+        
+        "The beach":
+            "You were eaten by sharks and died."
+            
+        "The mountains":
+            "Good ending! You enjoyed a nice picnic."
 
     # This ends the game.
 
