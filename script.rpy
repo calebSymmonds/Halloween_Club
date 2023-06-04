@@ -1,42 +1,27 @@
-# The script of the game goes in this file.
+﻿define skelly = Character("Skelly", who_color="#ffffff")
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define skelly = Character("Skelly")
-
-
-# The game starts here.
-
+label splashscreen: 
+    "Warning: this game contains horror and frightening content." with dissolve
+    play sound "audio/vpunch.mp3" volume 0.5
+    "Only play if you can handle something REALLY spooky!" with vpunch
+return
+   
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
+    scene bg1
+    play music "audio/Naoya Sakamata.mp3" volume 0.25
     show skelly normal at truecenter
 
-    # These display lines of dialogue.
+    skelly "Welcome to the Halloween Club visual novel!"
 
-    skelly "You've created a new Ren'Py game."
-
-    skelly "Once you add a story, pictures, and music, you can release it to the world!"
+    skelly "This project is still in development. We appreciate your patience at this time."
     
     menu:
         "Where do you want to go?"
         
         "The beach":
-            "You were eaten by sharks and died."
+            'You were eaten by sharks and died.'
             
         "The mountains":
             "Good ending! You enjoyed a nice picnic."
-
-    # This ends the game.
 
     return
